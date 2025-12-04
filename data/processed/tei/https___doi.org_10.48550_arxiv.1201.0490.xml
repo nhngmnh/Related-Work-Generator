@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Scikit-learn: Machine Learning in Python</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2018-06-05">5 Jun 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Fabian</forename><surname>Pedregosa</surname></persName>
+							<email>fabian.pedregosa@inria.fr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">INRIA Saclay Neurospin</orgName>
+								<address>
+									<addrLine>Bât 145</addrLine>
+									<settlement>Parietal</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff11">
+								<orgName type="institution">IESL Lab UMass Amherst Amherst</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vincent</forename><surname>Michel</surname></persName>
+							<email>vincent.michel@logilab.fr</email>
+							<affiliation key="aff1">
+								<orgName type="institution">CEA Saclay Gif sur Yvette</orgName>
+								<address>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff11">
+								<orgName type="institution">IESL Lab UMass Amherst Amherst</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Olivier</forename><surname>Grisel</surname></persName>
+							<email>olivier.grisel@ensta.fr</email>
+							<affiliation key="aff2">
+								<address>
+									<settlement>Nuxeo Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff11">
+								<orgName type="institution">IESL Lab UMass Amherst Amherst</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mathieu</forename><surname>Blondel</surname></persName>
+							<email>mblondel@ai.cs.kobe-u.ac.jp</email>
+							<affiliation key="aff3">
+								<orgName type="institution">Kobe University Kobe</orgName>
+								<address>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff11">
+								<orgName type="institution">IESL Lab UMass Amherst Amherst</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Andreas</forename><surname>Müller</surname></persName>
+							<email>andreas.mueller@columbia.edu</email>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Computer Science &amp; Data Science Institute</orgName>
+								<orgName type="institution">Columbia University New York</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joel</forename><surname>Nothman</surname></persName>
+							<email>joel.nothman@gmail.com</email>
+							<affiliation key="aff5">
+								<orgName type="institution" key="instit1">Sydney Informatics Hub University of Sydney</orgName>
+								<orgName type="institution" key="instit2">NSW</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gilles</forename><surname>Louppe</surname></persName>
+							<email>g.louppe@ulg.ac.be</email>
+							<affiliation key="aff6">
+								<orgName type="department">Dept. of EE &amp; CS</orgName>
+								<orgName type="institution">University of Liège Liège</orgName>
+								<address>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peter</forename><surname>Prettenhofer</surname></persName>
+							<email>peter.prettenhofer@gmail.com</email>
+							<affiliation key="aff7">
+								<orgName type="institution">Bauhaus-Universität Weimar Weimar</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ron</forename><surname>Weiss</surname></persName>
+							<email>ronweiss@gmail.com</email>
+							<affiliation key="aff8">
+								<orgName type="institution">Google Inc New York</orgName>
+								<address>
+									<region>NY</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vincent</forename><surname>Dubourg</surname></persName>
+							<email>vincent.dubourg@gmail.com</email>
+							<affiliation key="aff9">
+								<orgName type="institution" key="instit1">Clermont Université</orgName>
+								<orgName type="institution" key="instit2">IFMA</orgName>
+								<orgName type="institution" key="instit3">LaMI Clermont-Ferrand</orgName>
+								<address>
+									<postCode>3867</postCode>
+									<region>EA</region>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jake</forename><surname>Vanderplas</surname></persName>
+							<email>vanderplas@astro.washington.edu</email>
+							<affiliation key="aff10">
+								<orgName type="department">Astronomy Department</orgName>
+								<orgName type="institution">University of Washington</orgName>
+								<address>
+									<postBox>Box 351580</postBox>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gaël</forename><surname>Varoquaux</surname></persName>
+							<email>gael.varoquaux@normalesup.org</email>
+							<affiliation key="aff11">
+								<orgName type="institution">IESL Lab UMass Amherst Amherst</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexandre</forename><surname>Gramfort</surname></persName>
+							<email>alexandre.gramfort@inria.fr</email>
+							<affiliation key="aff11">
+								<orgName type="institution">IESL Lab UMass Amherst Amherst</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bertrand</forename><surname>Thirion</surname></persName>
+							<email>bertrand.thirion@inria.fr</email>
+							<affiliation key="aff11">
+								<orgName type="institution">IESL Lab UMass Amherst Amherst</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><surname>Cournapeau</surname></persName>
+							<email>cournape@gmail.com</email>
+							<affiliation key="aff12">
+								<address>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Matthieu</forename><surname>Brucher</surname></persName>
+							<email>matthieu.brucher@gmail.com</email>
+							<affiliation key="aff13">
+								<orgName type="institution">LNAO Neurospin</orgName>
+								<address>
+									<addrLine>Bât 145</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Matthieu</forename><surname>Perrot</surname></persName>
+							<email>matthieu.perrot@cea.fr</email>
+							<affiliation key="aff14">
+								<orgName type="institution">CEA Saclay Gif sur Yvette</orgName>
+								<address>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Scikit-learn: Machine Learning in Python</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-06-05">5 Jun 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DC9A559126462B674FE84EDB98BB451E</idno>
+					<idno type="arXiv">arXiv:1201.0490v4[cs.LG]</idno>
+					<note type="submission">Submitted 3/11; Revised 8/11;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.1" ident="GROBID" when="2025-11-29T05:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Python</term>
+					<term>supervised learning</term>
+					<term>unsupervised learning</term>
+					<term>model selection</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Scikit-learn is a Python module integrating a wide range of state-of-the-art machine learning algorithms for medium-scale supervised and unsupervised problems. This package focuses on bringing machine learning to non-specialists using a general-purpose high-level language. Emphasis is put on ease of use, performance, documentation, and API consistency. It has minimal dependencies and is distributed under the simplified BSD license, encouraging its use in both academic and commercial settings. Source code, binaries, and documentation can be downloaded from http://scikit-learn.org.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>The Python programming language is establishing itself as one of the most popular languages for scientific computing. Thanks to its high-level interactive nature and its maturing ecosystem of scientific libraries, it is an appealing choice for algorithmic development and exploratory data analysis <ref type="bibr" target="#b2">(Dubois, 2007;</ref><ref type="bibr">Milmann and Avaizis, 2011</ref>). Yet, as a generalpurpose language, it is increasingly used not only in academic settings but also in industry.</p><p>Scikit-learn harnesses this rich environment to provide state-of-the-art implementations of many well known machine learning algorithms, while maintaining an easy-to-use interface tightly integrated with the Python language. This answers the growing need for statistical data analysis by non-specialists in the software and web industries, as well as in fields outside of computer-science, such as biology or physics. Scikit-learn differs from other machine learning toolboxes in Python for various reasons: i) it is distributed under the BSD license ii) it incorporates compiled code for efficiency, unlike MDP <ref type="bibr" target="#b15">(Zito et al., 2008)</ref> and pybrain <ref type="bibr" target="#b12">(Schaul et al., 2010)</ref>, iii) it depends only on numpy and scipy to facilitate easy distribution, unlike pymvpa <ref type="bibr" target="#b6">(Hanke et al., 2009)</ref> that has optional dependencies such as R and shogun, and iv) it focuses on imperative programming, unlike pybrain which uses a data-flow framework. While the package is mostly written in Python, it incorporates the C++ libraries LibSVM <ref type="bibr" target="#b1">(Chang and Lin, 2001)</ref> and LibLinear <ref type="bibr" target="#b3">(Fan et al., 2008)</ref> that provide reference implementations of SVMs and generalized linear models with compatible licenses. Binary packages are available on a rich set of platforms including Windows and any POSIX platforms. Furthermore, thanks to its liberal license, it has been widely distributed as part of major free software distributions such as Ubuntu, Debian, Mandriva, NetBSD and Macports and in commercial distributions such as the "Enthought Python Distribution".</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Project Vision</head><p>Code quality. Rather than providing as many features as possible, the project's goal has been to provide solid implementations. Code quality is ensured with unit tests-as of release 0.8, test coverage is 81%-and the use of static analysis tools such as pyflakes and pep8. Finally, we strive to use consistent naming for the functions and parameters used throughout a strict adherence to the Python coding guidelines and numpy style documentation. BSD licensing. Most of the Python ecosystem is licensed with non-copyleft licenses. While such policy is beneficial for adoption of these tools by commercial projects, it does impose some restrictions: we are unable to use some existing scientific code, such as the GSL. Bare-bone design and API. To lower the barrier of entry, we avoid framework code and keep the number of different objects to a minimum, relying on numpy arrays for data containers. Community-driven development. We base our development on collaborative tools such as git, github and public mailing lists. External contributions are welcome and encouraged. Documentation. Scikit-learn provides a ∼300 page user guide including narrative documentation, class references, a tutorial, installation instructions, as well as more than 60 examples, some featuring real-world applications. We try to minimize the use of machinelearning jargon, while maintaining precision with regards to the algorithms employed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Underlying Technologies</head><p>Numpy: the base data structure used for data and model parameters. Input data is presented as numpy arrays, thus integrating seamlessly with other scientific Python libraries. Numpy's view-based memory model limits copies, even when binding with compiled code <ref type="bibr" target="#b14">(Van der Walt et al., 2011)</ref>. It also provides basic arithmetic operations. Scipy: efficient algorithms for linear algebra, sparse matrix representation, special functions and basic statistical functions. Scipy has bindings for many Fortran-based standard numerical packages, such as LAPACK. This is important for ease of installation and portability, as providing libraries around Fortran code can prove challenging on various platforms. Cython: a language for combining C in Python. Cython makes it easy to reach the performance of compiled languages with Python-like syntax and high-level operations. It is also used to bind compiled libraries, eliminating the boilerplate code of Python/C extensions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Code Design</head><p>Objects specified by interface, not by inheritance. To facilitate the use of external objects with scikit-learn, inheritance is not enforced; instead, code conventions provide a consistent interface. The central object is an estimator, that implements a fit method, accepting as  <ref type="bibr" target="#b12">(Schaul et al., 2010)</ref>, pymvpa <ref type="bibr" target="#b6">(Hanke et al., 2009)</ref>, MDP <ref type="bibr" target="#b15">(Zito et al., 2008)</ref> and Shogun <ref type="bibr" target="#b13">(Sonnenburg et al., 2010)</ref>.</p><p>For more benchmarks see http://github.com/scikit-learn.</p><p>arguments an input data array and, optionally, an array of labels for supervised problems. Supervised estimators, such as SVM classifiers, can implement a predict method. Some estimators, that we call transformers, for example, PCA, implement a transform method, returning modified input data. Estimators may also provide a score method, which is an increasing evaluation of goodness of fit: a log-likelihood, or a negated loss function. The other important object is the cross-validation iterator, which provides pairs of train and test indices to split input data, for example K-fold, leave one out, or stratified cross-validation. Model selection. Scikit-learn can evaluate an estimator's performance or select parameters using cross-validation, optionally distributing the computation to several cores. This is accomplished by wrapping an estimator in a GridSearchCV object, where the "CV" stands for "cross-validated". During the call to fit, it selects the parameters on a specified parameter grid, maximizing a score (the score method of the underlying estimator). predict, score, or transform are then delegated to the tuned estimator. This object can therefore be used transparently as any other estimator. Cross validation can be made more efficient for certain estimators by exploiting specific properties, such as warm restarts or regularization paths <ref type="bibr" target="#b4">(Friedman et al., 2010)</ref>. This is supported through special objects, such as the LassoCV. Finally, a Pipeline object can combine several transformers and an estimator to create a combined estimator to, for example, apply dimension reduction before fitting. It behaves as a standard estimator, and GridSearchCV therefore tune the parameters of all steps.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">High-level yet Efficient: Some Trade Offs</head><p>While scikit-learn focuses on ease of use, and is mostly written in a high level language, care has been taken to maximize computational efficiency. In Table <ref type="table">1</ref>, we compare computation time for a few algorithms implemented in the major machine learning toolkits accessible in Python. We use the Madelon data set <ref type="bibr" target="#b5">(Guyon et al., 2004)</ref>, 4400 instances and 500 attributes, The data set is quite large, but small enough for most algorithms to run. SVM. While all of the packages compared call libsvm in the background, the performance of scikit-learn can be explained by two factors. First, our bindings avoid memory copies and have up to 40% less overhead than the original libsvm Python bindings. Second, we patch libsvm to improve efficiency on dense data, use a smaller memory footprint, and better use memory alignment and pipelining capabilities of modern processors. This patched version also provides unique features, such as setting weights for individual samples. LARS. Iteratively refining the residuals instead of recomputing them gives performance gains of 2-10 times over the reference R implementation <ref type="bibr">(Hastie and Efron, 2004)</ref>. Pymvpa uses this implementation via the Rpy R bindings and pays a heavy price to memory copies. Elastic Net. We benchmarked the scikit-learn coordinate descent implementations of Elastic Net. It achieves the same order of performance as the highly optimized Fortran version glmnet <ref type="bibr" target="#b4">(Friedman et al., 2010)</ref> on medium-scale problems, but performance on very large problems is limited since we do not use the KKT conditions to define an active set. kNN. The k-nearest neighbors classifier implementation constructs a ball tree <ref type="bibr" target="#b10">(Omohundro, 1989)</ref> of the samples, but uses a more efficient brute force search in large dimensions. PCA. For medium to large data sets, scikit-learn provides an implementation of a truncated PCA based on random projections <ref type="bibr" target="#b11">(Rokhlin et al., 2009)</ref>. k-means. scikit-learn's k-means algorithm is implemented in pure Python. Its performance is limited by the fact that numpy's array operations take multiple passes over data.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Conclusion</head><p>Scikit-learn exposes a wide variety of machine learning algorithms, both supervised and unsupervised, using a consistent, task-oriented interface, thus enabling easy comparison of methods for a given application. Since it relies on the scientific Python ecosystem, it can easily be integrated into applications outside the traditional range of statistical data analysis. Importantly, the algorithms, implemented in a high-level language, can be used as building blocks for approaches specific to a use case, for example, in medical imaging <ref type="bibr" target="#b8">(Michel et al., 2011)</ref>. Future work includes online learning, to scale to large data sets.</p></div>		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">MLPy: high-performance Python package for predictive modeling</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Albanese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Merler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jurman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Visintainer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS, MLOSS workshop</title>
+				<imprint>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">LIBSVM: a library for support vector machines</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Lin</surname></persName>
+		</author>
+		<ptr target="http://www.csie.ntu.edu.tw/cjlin/libsvm" />
+		<imprint>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Python: batteries included</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">F</forename><surname>Dubois</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Computing in Science &amp; Engineering. IEEE/AIP</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<date type="published" when="2007-05">May 2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">LIBLINEAR: A library for large linear classification</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Hsieh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">R</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Machine Learning Research</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1871" to="1874" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Regularization paths for generalized linear models via coordinate descent</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Friedman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hastie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tibshirani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of statistical software</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Result analysis of the NIPS 2003 feature selection challenge</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>I Guyon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gunn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ben-Hur</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Dror</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">PyMVPA: A Python toolbox for multivariate pattern analysis of fMRI data</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hanke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">O</forename><surname>Halchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">B</forename><surname>Sederberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Hanson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Haxby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pollmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroinformatics</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="37" to="53" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Least Angle Regression, Lasso and Forward Stagewise</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hastie</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Efron</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">A supervised clustering approach for fMRI-based inference of brain states. Patt Rec, page epub ahead of print</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Michel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gramfort</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Varoquaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Eger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Keribin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Thirion</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.patcog.2011.04.006</idno>
+		<imprint>
+			<date type="published" when="2011-04">April 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">Computing in Science &amp; Engineering. IEEE/AIP</title>
+		<editor>K.J. Milmann and M. Avaizis</editor>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<date type="published" when="2011-03">March 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Five balltree construction algorithms</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Omohundro</surname></persName>
+		</author>
+		<idno>TR-89-063</idno>
+		<imprint>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">ICSI Technical Report</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">A randomized algorithm for principal component analysis</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rokhlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Szlam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tygert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM Journal on Matrix Analysis and Applications</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1100" to="1124" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Schaul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bayer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wierstra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Felder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Sehnke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Rückstieß</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schmidhuber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PyBrain. The Journal of Machine Learning Research</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="743" to="746" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sonnenburg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rätsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Henschel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Widmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Behr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zien</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Bona</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Binder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gehl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Franc</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The SHOGUN Machine Learning Toolbox</title>
+				<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="1799" to="1802" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">The NumPy array: a structure for efficient numerical computation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Van Der Walt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Colbert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Varoquaux</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Computing in Science and Engineering</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Modular toolkit for Data Processing (MDP): a Python data processing framework</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Zito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Wilbert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wiskott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berkes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in neuroinformatics</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -9,8 +9,8 @@ OPENALEX_BASE = "https://api.openalex.org"
 def search_openalex(query: str, max_results: int = 5) -> List[Dict]:
     """Fetch papers from OpenAlex"""
     params = {
-        "search": query,
-        "per_page": max_results,
+        "filter": f"display_name.search:{query}",
+        "per-page": max_results,
         "sort": "relevance_score:desc"
     }
 
@@ -39,3 +39,4 @@ def search_openalex(query: str, max_results: int = 5) -> List[Dict]:
         })
 
     return papers
+

@@ -7,12 +7,19 @@ from modules.embeddings.vector_db import save_chunk
 KEYWORDS = [
     "machine learning",
     "evolutionary algorithms",
-    "metaheuristic optimization"
+    "metaheuristic optimization",
+    "large language model",
+    "genetic algorithms",
+    "diffusion model",
+    "reinforcement learning",
+    "computer vision",
+    "natural language processing",
+    "generative AI"
 ]
 
 def build_vectorstore():
     for kw in KEYWORDS:
-        papers = search_openalex(kw, max_results=5)
+        papers = search_openalex(kw, max_results=100)
 
         for p in papers:
             chunks = chunk_text(p["abstract"])
@@ -23,5 +30,5 @@ def build_vectorstore():
 
     print("Vectorstore build complete!")
 
-if __name__ == "__main__":
+if __name__ == "_main_":
     build_vectorstore()

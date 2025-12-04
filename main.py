@@ -1,34 +1,22 @@
-# main.py
-from modules.embeddings import vector_db
-from sentence_transformers import SentenceTransformer
+from modules.rag.content_generator_gemini import generate_related_work, retrieve_context, evaluate_related_work
 
-# 1. Load embedding model
-embedder = SentenceTransformer('all-mpnet-base-v2')  # hoặc model bạn dùng khi lưu chunks
+def main_rag():
+    new_paper = input("Nhập nội dung paper cần tổng hợp Related Work: ")
 
-def embed_text(text: str):
-    return embedder.encode(text).tolist()
+    # Lấy các chunk liên quan
+    retrieved_chunks = retrieve_context(new_paper)
 
-def query_related_papers(new_paper_text, top_k=5):
-    query_emb = embed_text(new_paper_text)
-    results = vector_db.collection.query(
-        query_embeddings=[query_emb],
-        n_results=top_k,
-        include=['metadatas', 'documents', 'distances']
-    )
-    return results
+    # Sinh Related Work
+    related_work = generate_related_work(new_paper)
+    print("\n--- Related Work (Gemini) ---\n")
+    print(related_work)
 
-def main():
-    new_paper = input("Nhập nội dung paper cần tìm tương tự: ")
-    results = query_related_papers(new_paper, top_k=5)
+    # Evaluate
+    eval_result = evaluate_related_work(related_work, new_paper, retrieved_chunks)
+    print("\n--- Automated Evaluation ---\n")
+    print(eval_result)
 
-    print("\n--- Top related papers ---")
-    for idx, (doc, metadata, dist) in enumerate(zip(
-        results['documents'][0],
-        results['metadatas'][0],
-        results['distances'][0]
-    )):
-        print(f"{idx+1}. Score: {1-dist:.4f}, Title: {metadata.get('title','N/A')}")
-        print(f"   Document snippet: {doc[:200]}...\n")
+    return related_work, eval_result
 
-if __name__ == "__main__":
-    main()
+if __name__ == "_main_":
+    main_rag()
